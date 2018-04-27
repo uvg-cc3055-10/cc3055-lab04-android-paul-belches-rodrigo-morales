@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Nave : MonoBehaviour {
 
@@ -22,6 +23,7 @@ public class Nave : MonoBehaviour {
 	}
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		GameController.instance.gameOver = true;		
-	}
+		GameController.instance.gameOver = true;
+        SceneManager.LoadScene("MENU");
+    }
 }
