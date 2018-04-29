@@ -14,6 +14,7 @@ public class Meteoritos : MonoBehaviour {
 		transform.Translate(Vector3.down * speed * Time.deltaTime);
 		if (transform.position.y<-5.52){
 			Destroy(gameObject);
+            GameController.instance.score++;
 		}
 	}
 }
